@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/favotite_page.dart';
 import 'package:flutter_application_1/module/date_base.dart';
 import 'page_user.dart';
+import 'favotite_page.dart';
 
 void main() {
   runApp(
@@ -22,9 +24,31 @@ class _MyWidgetState extends State<MainPageStore> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: catalog_cars.length,
-      itemBuilder: _createListView,
+    return Scaffold(
+      appBar: AppBar(
+          title: Row(
+        children: [
+          Text("Твой текст"),
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => favoriteUser(),
+                ),
+              );
+            },
+            icon: const Icon(
+              Icons.favorite,
+              size: 32,
+            ),
+          ),
+        ],
+      )),
+      body: ListView.builder(
+        itemCount: catalog_cars.length,
+        itemBuilder: _createListView,
+      ),
     );
   }
 
@@ -32,7 +56,11 @@ class _MyWidgetState extends State<MainPageStore> {
     return GestureDetector(
       onTap: () {
         setState(() {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => MyWidget(id: selectIndex),));
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => MyWidget(id: selectIndex),
+              ));
           selectIndex = index;
         });
       },
@@ -66,7 +94,30 @@ class _MyWidgetState extends State<MainPageStore> {
               ),
               const SizedBox(
                 height: 8,
-              )
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  const SizedBox(
+                    width: 25,
+                  ),
+
+                  //кнопка добавления в избранное
+
+                  IconButton(
+                    onPressed: () {
+                      if (false == favoriteList.contains(index)) {
+                        print(favoriteList.contains(index));
+                        favoriteList.add(index);
+                      }
+                    },
+                    icon: const Icon(
+                      Icons.favorite,
+                      size: 32,
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
