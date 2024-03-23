@@ -65,11 +65,14 @@ class _MyWidgetState extends State<MyWidget> {
             Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  
+                  // shop button
                   ElevatedButton.icon(
                     onPressed: () {
-                      if (false == shopList.contains(activeIndex)) {
-                        shopList.add(activeIndex);
-                      }
+                      //if (false == shopList.contains(activeIndex)) {
+                        shopList.add(widget.id);
+                        print(widget.id);
+                      //}
                     },
                     label: const Text(
                       "Add to bascet",
