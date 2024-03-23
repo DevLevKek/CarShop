@@ -1,31 +1,72 @@
 import 'package:flutter/material.dart';
-
-// class favorite_active {
-//   int id;
-//   bool isActive;
-//   favorite_active(this.id, this.isActive);
-// }
+import 'package:flutter_application_1/module/date_base.dart';
+import 'page_user.dart';
 
 List<int> favoriteList = [];
 
-class favoriteUser extends StatelessWidget {
+class favoriteUser extends StatefulWidget {
   const favoriteUser({super.key});
+
+  @override
+  State<favoriteUser> createState() => _favoriteUserState();
+}
+
+class _favoriteUserState extends State<favoriteUser> {
+  int id = -1;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("test"),
+        title: const Text("Favorite"),
       ),
       body: ListView.builder(
         itemCount: favoriteList.length,
         itemBuilder: (context, index) {
-          return Container(
-            height: 200,
-            width: 200,
-            child: Text(
-              favoriteList[index].toString(),
-              style: TextStyle(fontSize: 26),
+          return Dismissible(
+            key: UniqueKey(),
+            onDismissed: (_) {
+              setState(() {
+                favoriteList.removeAt(index);
+              });
+            },
+            child: GestureDetector(
+              onTap: () {
+                setState(
+                  () {
+                    id = favoriteList[index];
+                    Navigator.push(
+                     context,
+                      MaterialPageRoute(
+                        builder: (context) => MyWidget(id: id),
+                      ),
+                    );
+                    
+                    print(id);
+                  },
+                );
+              },
+              child: Card(
+                color: Colors.white,
+                elevation: 4,
+                child: Column(
+                  children: [
+                    Container(
+                      height: 200,
+                      child: Image.asset(
+                          catalog_cars[favoriteList[index]].carsPhoto[0]),
+                    ),
+                    ListTile(
+                      title: Text(catalog_cars[favoriteList[index]].name,
+                          style: const TextStyle(fontSize: 24)),
+                      subtitle: Text(
+                        catalog_cars[favoriteList[index]].price.toString(),
+                        style: const TextStyle(fontSize: 20),
+                      ),
+                    )
+                  ],
+                ),
+              ),
             ),
           );
         },

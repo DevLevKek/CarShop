@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/favotite_page.dart';
 import 'package:flutter_application_1/module/date_base.dart';
+import 'package:flutter_application_1/shopping_cart_page.dart';
 import 'page_user.dart';
-import 'favotite_page.dart';
 
 void main() {
   runApp(
@@ -21,30 +21,50 @@ class MainPageStore extends StatefulWidget {
 
 class _MyWidgetState extends State<MainPageStore> {
   int selectIndex = -1;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //APPBAR
       appBar: AppBar(
           title: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text("Твой текст"),
-          IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => favoriteUser(),
+          const Text("Car Shop"),
+          Row(
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const favoriteUser(),
+                    ),
+                  );
+                },
+                icon: const Icon(
+                  Icons.favorite,
+                  size: 32,
                 ),
-              );
-            },
-            icon: const Icon(
-              Icons.favorite,
-              size: 32,
-            ),
+              ),
+              IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ShopCar(),
+                      ),
+                    );
+                  },
+                  icon: const Icon(
+                    Icons.shopping_basket,
+                    size: 32,
+                  ))
+            ],
           ),
         ],
       )),
+
+      //LISTVIEW
       body: ListView.builder(
         itemCount: catalog_cars.length,
         itemBuilder: _createListView,
@@ -57,10 +77,11 @@ class _MyWidgetState extends State<MainPageStore> {
       onTap: () {
         setState(() {
           Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => MyWidget(id: selectIndex),
-              ));
+            context,
+            MaterialPageRoute(
+              builder: (context) => MyWidget(id: selectIndex),
+            ),
+          );
           selectIndex = index;
         });
       },
@@ -70,6 +91,8 @@ class _MyWidgetState extends State<MainPageStore> {
             : const Color.fromARGB(255, 255, 255, 255),
         child: ListTile(
           title: Image.asset(catalog_cars[index].carsPhoto[0]),
+
+          //
           subtitle: Column(
             children: [
               Text(
@@ -95,20 +118,38 @@ class _MyWidgetState extends State<MainPageStore> {
               const SizedBox(
                 height: 8,
               ),
+
+              // add to basket
               Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const SizedBox(
-                    width: 25,
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      // if (false == shopList.contains(index)) {
+                        shopList.add(index);
+                      // }
+                    },
+                    label: const Text(
+                      "Add to bascet",
+                      style: TextStyle(fontSize: 24),
+                    ),
+                    icon: const Icon(
+                      Icons.shopping_basket,
+                      size: 32,
+                    ),
                   ),
 
-                  //кнопка добавления в избранное
+                  const SizedBox(
+                    width: 16,
+                  ),
 
+                  //add to favorite
                   IconButton(
                     onPressed: () {
+                      setState(() {});
                       if (false == favoriteList.contains(index)) {
-                        print(favoriteList.contains(index));
                         favoriteList.add(index);
+                        print(index);
                       }
                     },
                     icon: const Icon(
