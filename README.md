@@ -1,5 +1,6 @@
 <h1>Практическая работа №4<h1>
 <h2>Скриншот работы<h2>
-<img src="https://github.com/DevLevKek/Drackovskiy_Lab_4/assets/135211811/5ead9a67-b9f0-44a8-8b76-af28d98905d4">
-<img src="https://github.com/DevLevKek/Drackovskiy_Lab_4/assets/135211811/8b76acdb-148b-4e02-b004-2b5061d135eb">
-<img src="https://github.com/DevLevKek/Drackovskiy_Lab_4/assets/135211811/6644ead5-cc94-4153-8a57-cc8d7d2888a8">
+<img src="https://github.com/DevLevKek/Drackovskiy_Lab_4/assets/135211811/57824fab-a0c6-4863-b3f0-3bd7c59cc1c2">
+<img src="https://github.com/DevLevKek/Drackovskiy_Lab_4/assets/135211811/9b2606e3-6895-4b35-a41e-98325ad2864a">
+<img src="https://github.com/DevLevKek/Drackovskiy_Lab_4/assets/135211811/bac60264-613a-4a06-9f3d-28e244cff710">
+<img src="https://github.com/DevLevKek/Drackovskiy_Lab_4/assets/135211811/7bb65145-531c-4afc-a983-0f2ed5a19690">
