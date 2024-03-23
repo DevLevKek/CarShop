@@ -4,14 +4,14 @@ import 'page_user.dart';
 
 List<int> favoriteList = [];
 
-class favoriteUser extends StatefulWidget {
-  const favoriteUser({super.key});
+class FavoriteUser extends StatefulWidget {
+  const FavoriteUser({super.key});
 
   @override
-  State<favoriteUser> createState() => _favoriteUserState();
+  State<FavoriteUser> createState() => _FavoriteUserState();
 }
 
-class _favoriteUserState extends State<favoriteUser> {
+class _FavoriteUserState extends State<FavoriteUser> {
   int id = -1;
 
   @override
@@ -36,13 +36,11 @@ class _favoriteUserState extends State<favoriteUser> {
                   () {
                     id = favoriteList[index];
                     Navigator.push(
-                     context,
+                      context,
                       MaterialPageRoute(
                         builder: (context) => MyWidget(id: id),
                       ),
                     );
-                    
-                    print(id);
                   },
                 );
               },

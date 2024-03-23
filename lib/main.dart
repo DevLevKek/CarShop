@@ -37,7 +37,7 @@ class _MyWidgetState extends State<MainPageStore> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const favoriteUser(),
+                      builder: (context) => const FavoriteUser(),
                     ),
                   );
                 },
@@ -112,7 +112,7 @@ class _MyWidgetState extends State<MainPageStore> {
                 height: 8,
               ),
               Text(
-                catalog_cars[index].price.toString() + " Рублей",
+                "${catalog_cars[index].price.toString()} Рублей",
                 style: const TextStyle(fontSize: 20),
               ),
               const SizedBox(
@@ -126,7 +126,7 @@ class _MyWidgetState extends State<MainPageStore> {
                   ElevatedButton.icon(
                     onPressed: () {
                       // if (false == shopList.contains(index)) {
-                        shopList.add(index);
+                      shopList.add(index);
                       // }
                     },
                     label: const Text(
@@ -149,7 +149,6 @@ class _MyWidgetState extends State<MainPageStore> {
                       setState(() {});
                       if (false == favoriteList.contains(index)) {
                         favoriteList.add(index);
-                        print(index);
                       }
                     },
                     icon: const Icon(

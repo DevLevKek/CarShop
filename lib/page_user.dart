@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/module/date_base.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -71,7 +71,6 @@ class _MyWidgetState extends State<MyWidget> {
                     onPressed: () {
                       //if (false == shopList.contains(activeIndex)) {
                         shopList.add(widget.id);
-                        print(widget.id);
                       //}
                     },
                     label: const Text(
@@ -126,7 +125,7 @@ class _MyWidgetState extends State<MyWidget> {
               height: 4,
             ),
             Text(
-              catalog_cars[widget.id].price.toString() + " Рублей",
+              "${catalog_cars[widget.id].price.toString()} + Рублей",
               style: const TextStyle(fontSize: 32),
             ),
             const SizedBox(
