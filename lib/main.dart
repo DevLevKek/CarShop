@@ -14,12 +14,13 @@ void main() {
 
 class MainPageStore extends StatefulWidget {
   const MainPageStore({super.key});
-
   @override
   State<MainPageStore> createState() => _MyWidgetState();
 }
 
 class _MyWidgetState extends State<MainPageStore> {
+  //Переменные
+
   int selectIndex = -1;
   @override
   Widget build(BuildContext context) {
@@ -47,18 +48,19 @@ class _MyWidgetState extends State<MainPageStore> {
                 ),
               ),
               IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ShopCar(),
-                      ),
-                    );
-                  },
-                  icon: const Icon(
-                    Icons.shopping_basket,
-                    size: 32,
-                  ))
+                icon: const Icon(
+                  Icons.shopping_basket,
+                  size: 32,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ShopCar(),
+                    ),
+                  );
+                },
+              )
             ],
           ),
         ],
@@ -145,16 +147,24 @@ class _MyWidgetState extends State<MainPageStore> {
 
                   //add to favorite
                   IconButton(
-                    onPressed: () {
-                      setState(() {});
-                      if (false == favoriteList.contains(index)) {
-                        favoriteList.add(index);
-                      }
-                    },
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.favorite,
                       size: 32,
+                      color: true == favoriteList.contains(index)
+                          ? const Color.fromARGB(255, 255, 0, 0)
+                          : const Color.fromARGB(255, 0, 0, 0),
                     ),
+                    onPressed: () {
+                      setState(
+                        () {
+                          if (false == favoriteList.contains(index)) {
+                            favoriteList.add(index);
+                          } else if (true == favoriteList.contains(index)) {
+                            favoriteList.remove(index);
+                          }
+                        },
+                      );
+                    },
                   ),
                 ],
               ),

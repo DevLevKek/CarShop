@@ -13,7 +13,6 @@ class FavoriteUser extends StatefulWidget {
 
 class _FavoriteUserState extends State<FavoriteUser> {
   int id = -1;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,7 +48,7 @@ class _FavoriteUserState extends State<FavoriteUser> {
                 elevation: 4,
                 child: Column(
                   children: [
-                    Container(
+                    SizedBox(
                       height: 200,
                       child: Image.asset(
                           catalog_cars[favoriteList[index]].carsPhoto[0]),
