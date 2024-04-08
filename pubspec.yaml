@@ -61,7 +61,6 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  uses-material-design: true
   assets:
      - lib/assets/image/GRANTA СЕДАН/GRANTA СЕДАН.png
      - lib/assets/image/GRANTA СЕДАН/GRANTA СЕДАН 01.png
