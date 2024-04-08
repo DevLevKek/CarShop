@@ -61,52 +61,40 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
+  uses-material-design: true
   assets:
-   - lib/image/GRANTA СЕДАН/GRANTA СЕДАН.png
-   - lib/image/GRANTA СЕДАН/GRANTA СЕДАН 01.png
-   - lib/image/GRANTA СЕДАН/GRANTA СЕДАН 02.png
-   - lib/image/LADA GRANTA CROSS/LADA GRANTA CROSS.png
-   - lib/image/LADA GRANTA CROSS/LADA GRANTA CROSS 01.png
-   - lib/image/LADA GRANTA CROSS/LADA GRANTA CROSS 02.png
-   - lib/image/LADA GRANTA DRIVE ACTIVE/LADA GRANTA DRIVE ACTIVE.png 
-   - lib/image/LADA GRANTA DRIVE ACTIVE/LADA GRANTA DRIVE ACTIVE 01.png
-   - lib/image/LADA GRANTA DRIVE ACTIVE/LADA GRANTA DRIVE ACTIVE 02.png
-   - lib/image/LADA NIVA LEGEND 3 ДВ/LADA NIVA LEGEND 3 ДВ.png	
-   - lib/image/LADA NIVA LEGEND 3 ДВ/LADA NIVA LEGEND 3 ДВ 01.png
-   - lib/image/LADA NIVA LEGEND 3 ДВ/LADA NIVA LEGEND 3 ДВ 02.png
-   - lib/image/LADA NIVA TRAVEL/LADA NIVA TRAVEL.png 
-   - lib/image/LADA NIVA TRAVEL/LADA NIVA TRAVEL 01.png
-   - lib/image/LADA NIVA TRAVEL/LADA NIVA TRAVEL 02.png
-   - lib/image/LADA VESTA CROSS/LADA VESTA CROSS.png 
-   - lib/image/LADA VESTA CROSS/LADA VESTA CROSS 01.png
-   - lib/image/LADA VESTA CROSS/LADA VESTA CROSS 02.png
-   - lib/image/LADA VESTA SW CROSS/LADA VESTA SW CROSS.png
-   - lib/image/LADA VESTA SW CROSS/LADA VESTA SW CROSS 01.png
-   - lib/image/LADA VESTA SW CROSS/LADA VESTA SW CROSS 02.png
-  
-  # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/assets-and-images/#resolution-aware
+     - lib/assets/image/GRANTA СЕДАН/GRANTA СЕДАН.png
+     - lib/assets/image/GRANTA СЕДАН/GRANTA СЕДАН 01.png
+     - lib/assets/image/GRANTA СЕДАН/GRANTA СЕДАН 02.png
+     - lib/assets/image/LADA GRANTA CROSS/LADA GRANTA CROSS.png
+     - lib/assets/image/LADA GRANTA CROSS/LADA GRANTA CROSS 01.png
+     - lib/assets/image/LADA GRANTA CROSS/LADA GRANTA CROSS 02.png
+     - lib/assets/image/LADA GRANTA DRIVE ACTIVE/LADA GRANTA DRIVE ACTIVE.png 
+     - lib/assets/image/LADA GRANTA DRIVE ACTIVE/LADA GRANTA DRIVE ACTIVE 01.png
+     - lib/assets/image/LADA GRANTA DRIVE ACTIVE/LADA GRANTA DRIVE ACTIVE 02.png
+     - lib/assets/image/LADA NIVA LEGEND 3 ДВ/LADA NIVA LEGEND 3 ДВ.png	
+     - lib/assets/image/LADA NIVA LEGEND 3 ДВ/LADA NIVA LEGEND 3 ДВ 01.png
+     - lib/assets/image/LADA NIVA LEGEND 3 ДВ/LADA NIVA LEGEND 3 ДВ 02.png
+     - lib/assets/image/LADA NIVA TRAVEL/LADA NIVA TRAVEL.png 
+     - lib/assets/image/LADA NIVA TRAVEL/LADA NIVA TRAVEL 01.png
+     - lib/assets/image/LADA NIVA TRAVEL/LADA NIVA TRAVEL 02.png
+     - lib/assets/image/LADA VESTA CROSS/LADA VESTA CROSS.png 
+     - lib/assets/image/LADA VESTA CROSS/LADA VESTA CROSS 01.png
+     - lib/assets/image/LADA VESTA CROSS/LADA VESTA CROSS 02.png
+     - lib/assets/image/LADA VESTA SW CROSS/LADA VESTA SW CROSS.png
+     - lib/assets/image/LADA VESTA SW CROSS/LADA VESTA SW CROSS 01.png
+     - lib/assets/image/LADA VESTA SW CROSS/LADA VESTA SW CROSS 02.png
+     - lib/assets/image/BACKGROUND/Вход.png
+     - lib/assets/image/BACKGROUND/Регистрация.png 
+     - lib/assets/image/BACKGROUND/Product.png 
+     - lib/assets/image/BACKGROUND/Favorite.png
+     - lib/assets/image/BACKGROUND/shop_sum.png
 
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/assets-and-images/#from-packages
+  fonts:
+    - family: Actay
+      fonts:
+      - asset: lib/assets/fonts/Actay-Regular.otf
+    - family: ActayWide
+      fonts:
+      - asset: lib/assets/fonts/ActayWide-Bold.otf
 
-  # To add custom fonts to your application, add a fonts section here,
-  # in this "flutter" section. Each entry in this list should have a
-  # "family" key with the font family name, and a "fonts" key with a
-  # list giving the asset and other descriptors for the font. For
-  # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
